@@ -1,9 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package trabalhojframes;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,8 +13,8 @@ import javax.swing.JOptionPane;
  */
 public class trabalhoifba extends javax.swing.JFrame {
     
-    String nome, x, nome_resp;
-    int idade, serie;
+    String nome, nome_resp;
+    int serie;
     String data, email, ts,est_civil;
     String texto1, texto2, texto3, texto4, texto5, texto6;
     String CPF;
@@ -49,10 +50,8 @@ public class trabalhoifba extends javax.swing.JFrame {
         jRadioButton6 = new javax.swing.JRadioButton();
         jRadioButton7 = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
@@ -118,7 +117,7 @@ public class trabalhoifba extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Rubik", 0, 14)); // NOI18N
         jLabel5.setText("CURSO:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, 100, -1));
 
         buttonGroup2.add(jRadioButton5);
@@ -141,13 +140,9 @@ public class trabalhoifba extends javax.swing.JFrame {
         jLabel1.setText("NOME:");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 39, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Rubik", 0, 14)); // NOI18N
-        jLabel2.setText("IDADE:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 67, -1, -1));
-
         jLabel3.setFont(new java.awt.Font("Rubik", 0, 14)); // NOI18N
         jLabel3.setText("SÉRIE/ANO");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 101, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,19 +151,12 @@ public class trabalhoifba extends javax.swing.JFrame {
         });
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 38, 233, -1));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 66, 165, -1));
-
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 100, 104, -1));
+        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, 104, -1));
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setFont(new java.awt.Font("Rubik", 0, 14)); // NOI18N
@@ -178,7 +166,7 @@ public class trabalhoifba extends javax.swing.JFrame {
                 jRadioButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 179, -1, -1));
+        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("Rubik", 0, 14)); // NOI18N
@@ -188,7 +176,7 @@ public class trabalhoifba extends javax.swing.JFrame {
                 jRadioButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 206, -1, -1));
+        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Rubik", 0, 14)); // NOI18N
         jLabel6.setText("TURNO:");
@@ -197,7 +185,7 @@ public class trabalhoifba extends javax.swing.JFrame {
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setFont(new java.awt.Font("Rubik", 0, 14)); // NOI18N
         jRadioButton3.setText("COMPUTAÇÃO");
-        jPanel1.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 179, -1, -1));
+        jPanel1.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, -1, -1));
 
         jLabel13.setBackground(new java.awt.Color(255, 255, 255));
         jLabel13.setFont(new java.awt.Font("Rubik", 0, 14)); // NOI18N
@@ -319,7 +307,7 @@ public class trabalhoifba extends javax.swing.JFrame {
         buttonGroup1.add(jRadioButton20);
         jRadioButton20.setFont(new java.awt.Font("Rubik", 0, 14)); // NOI18N
         jRadioButton20.setText("MATEMÁTICA");
-        jPanel1.add(jRadioButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 206, -1, -1));
+        jPanel1.add(jRadioButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Rubik", 0, 14)); // NOI18N
         jLabel12.setText("ESTADO CIVIL:");
@@ -372,7 +360,6 @@ public class trabalhoifba extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         nome = jTextField1.getText();
-        idade = Integer.parseInt(jTextField2.getText());
         serie = Integer.parseInt(jTextField3.getText());
         data = jTextField4.getText();
         email = jTextField6.getText();
@@ -441,11 +428,28 @@ public class trabalhoifba extends javax.swing.JFrame {
         }else if (jRadioButton21.isSelected()) {
             texto6 = jRadioButton21.getText();
         }
+        String idade = jTextField4.getText();
+        Date datadenascimento = null;
+        SimpleDateFormat formatar = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            datadenascimento = formatar.parse(idade);
+        } catch (ParseException ex) {
+            JOptionPane.showMessageDialog(this, "idade invalida");
+        }
+        Calendar hoje = Calendar.getInstance();
+        hoje.getTime();
+        Calendar datanas = Calendar.getInstance();
+        datanas.setTime(datadenascimento);
+        int i = hoje.get(Calendar.YEAR) - datanas.get(Calendar.YEAR);
+           if (hoje.get(Calendar.DAY_OF_MONTH) < datanas.get(Calendar.DAY_OF_MONTH)) {
+            i--;
+        }
         
-        if (idade <= 17) {
+        
+        if (i <= 17) {
             String x = JOptionPane.showInputDialog("informe o nome de seu resposável: ");
             JOptionPane.showMessageDialog(this, "Nome: " + nome
-                    + "\nIdade: " + idade
+                    + "\nIdade: " + i
                     + "\nSérie: " + serie
                     + "\nNome do responsável: " + x
                     + "\nData de nascimento: " + data
@@ -461,7 +465,7 @@ public class trabalhoifba extends javax.swing.JFrame {
                     + "\nCPF: " + CPF);
         } else { 
             JOptionPane.showMessageDialog(this, "Nome: " + nome
-                    + "\nIdade: " + idade
+                    + "\nIdade: " + i
                     + "\nSérie: " + serie
                     + "\nData de nascimento: " + data
                     + "\nCurso: " + texto1
@@ -490,10 +494,6 @@ public class trabalhoifba extends javax.swing.JFrame {
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
 
     }//GEN-LAST:event_jTextField3ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-
-    }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
 
@@ -583,7 +583,6 @@ public class trabalhoifba extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -614,7 +613,6 @@ public class trabalhoifba extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField6;
