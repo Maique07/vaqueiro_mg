@@ -15,6 +15,8 @@ public class paineldeinicio extends javax.swing.JFrame {
      */
     public paineldeinicio() {
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**

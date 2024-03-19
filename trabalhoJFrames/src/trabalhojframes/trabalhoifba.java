@@ -1,4 +1,3 @@
-
 package trabalhojframes;
 
 import java.text.ParseException;
@@ -6,23 +5,33 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import javax.swing.JOptionPane;
+import javax.swing.text.MaskFormatter;
 
 /**
  *
  * @author Maique
  */
 public class trabalhoifba extends javax.swing.JFrame {
-    
+
     String nome, nome_resp;
     int serie;
-    String data, email, ts,est_civil;
+    String data, email, ts, est_civil;
     String texto1, texto2, texto3, texto4, texto5, texto6;
     String CPF;
     /**
      * Creates new form trabalhoifba
      */
+    MaskFormatter mfdata;
+
     public trabalhoifba() {
+        try {
+            mfdata = new MaskFormatter("##/##/####");
+        } catch (ParseException ex) {
+            System.out.println("erro");
+        }
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**
@@ -45,7 +54,6 @@ public class trabalhoifba extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton6 = new javax.swing.JRadioButton();
         jRadioButton7 = new javax.swing.JRadioButton();
@@ -85,6 +93,7 @@ public class trabalhoifba extends javax.swing.JFrame {
         jRadioButton21 = new javax.swing.JRadioButton();
         jLabel16 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField(mfdata);
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -118,7 +127,6 @@ public class trabalhoifba extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Rubik", 0, 14)); // NOI18N
         jLabel5.setText("CURSO:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, 100, -1));
 
         buttonGroup2.add(jRadioButton5);
         jRadioButton5.setFont(new java.awt.Font("Rubik", 0, 14)); // NOI18N
@@ -337,6 +345,7 @@ public class trabalhoifba extends javax.swing.JFrame {
         jLabel16.setText("CPF:");
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 500, -1, -1));
         jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 520, 176, -1));
+        jPanel1.add(jFormattedTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, 140, -1));
 
         jLabel7.setFont(new java.awt.Font("Palatino Linotype", 0, 14)); // NOI18N
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhojframes/fig/a16bef7f-bf55-4cb0-b3be-876395dac9bd.jpg"))); // NOI18N
@@ -360,11 +369,25 @@ public class trabalhoifba extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         nome = jTextField1.getText();
+        if (nome.isBlank()) {
+            JOptionPane.showMessageDialog(this, "Informe o nome");
+            jTextField1.requestFocus();
+        } else if (jFormattedTextField1.getText().equals("  /  /    ")) {
+            JOptionPane.showMessageDialog(this, "Informe a data");
+            jFormattedTextField1.requestFocus();
+        }
         serie = Integer.parseInt(jTextField3.getText());
-        data = jTextField4.getText();
         email = jTextField6.getText();
+        if(email.isBlank()){
+            JOptionPane.showMessageDialog(this, "informe seu Email");
+            jTextField6.requestFocus();
+        }
         ts = jTextField8.getText();
         CPF = jTextField7.getText();
+        if(CPF.isBlank()){
+            JOptionPane.showMessageDialog(this, "informe seu CPF");
+            jTextField7.requestFocus();
+        }
         est_civil = jTextField9.getText();
         if (jRadioButton1.isSelected()) {
             texto1 = jRadioButton1.getText();
@@ -410,7 +433,7 @@ public class trabalhoifba extends javax.swing.JFrame {
         } else if (jRadioButton14.isSelected()) {
             texto4 = jRadioButton14.getText();
         }
-        
+
         if (jRadioButton15.isSelected()) {
             texto5 = jRadioButton15.getText();
         }
@@ -419,33 +442,31 @@ public class trabalhoifba extends javax.swing.JFrame {
         }
         if (jRadioButton17.isSelected()) {
             texto5 = jRadioButton17.getText();
-        }else if (jRadioButton19.isSelected()) {
+        } else if (jRadioButton19.isSelected()) {
             texto5 = jRadioButton19.getText();
         }
 
         if (jRadioButton18.isSelected()) {
             texto6 = jRadioButton18.getText();
-        }else if (jRadioButton21.isSelected()) {
+        } else if (jRadioButton21.isSelected()) {
             texto6 = jRadioButton21.getText();
         }
-        String idade = jTextField4.getText();
+        data = jFormattedTextField1.getText();
         Date datadenascimento = null;
         SimpleDateFormat formatar = new SimpleDateFormat("dd/MM/yyyy");
         try {
-            datadenascimento = formatar.parse(idade);
+            datadenascimento = formatar.parse(data);
         } catch (ParseException ex) {
-            JOptionPane.showMessageDialog(this, "idade invalida");
+            JOptionPane.showMessageDialog(null, "idade invalida");
         }
         Calendar hoje = Calendar.getInstance();
         hoje.getTime();
         Calendar datanas = Calendar.getInstance();
         datanas.setTime(datadenascimento);
         int i = hoje.get(Calendar.YEAR) - datanas.get(Calendar.YEAR);
-           if (hoje.get(Calendar.DAY_OF_MONTH) < datanas.get(Calendar.DAY_OF_MONTH)) {
+        if (hoje.get(Calendar.MONTH) < datanas.get(Calendar.MONTH)) {
             i--;
         }
-        
-        
         if (i <= 17) {
             String x = JOptionPane.showInputDialog("informe o nome de seu resposável: ");
             JOptionPane.showMessageDialog(this, "Nome: " + nome
@@ -463,7 +484,7 @@ public class trabalhoifba extends javax.swing.JFrame {
                     + "\nTipo sanguineo: " + ts
                     + "\nEstado civil: " + est_civil
                     + "\nCPF: " + CPF);
-        } else { 
+        } else {
             JOptionPane.showMessageDialog(this, "Nome: " + nome
                     + "\nIdade: " + i
                     + "\nSérie: " + serie
@@ -575,6 +596,7 @@ public class trabalhoifba extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup6;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -614,7 +636,6 @@ public class trabalhoifba extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
