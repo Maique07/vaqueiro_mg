@@ -12,7 +12,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.Timer;
 
 /**
  *
@@ -480,6 +483,19 @@ public class inicio extends javax.swing.JFrame {
             jLabel7.setForeground(Color.red);
             jTextField3.setForeground(Color.red);
             jTextField3.requestFocus();
+        } else if (curso == null) {
+            JOptionPane.showMessageDialog(this, "Por favor, informe seu curso.");
+            jLabel5.setForeground(Color.red);
+            jRadioButton1.setForeground(Color.red);
+            jRadioButton2.setForeground(Color.red);
+            jRadioButton3.setForeground(Color.red);
+            jRadioButton4.setForeground(Color.red);
+
+        } else if (sexo == null) {
+            JOptionPane.showMessageDialog(this, "Por favor, informe seu curso.");
+            jLabel13.setForeground(Color.red);
+            jRadioButton5.setForeground(Color.red);
+            jRadioButton6.setForeground(Color.red);
         } else {
             Date datadenascimento = null;
             Calendar datanasc = Calendar.getInstance();
