@@ -14,13 +14,12 @@ import java.util.Calendar;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
-
 /**
  *
  * @author Maique
  */
 public class inicio extends javax.swing.JFrame {
-    
+
     String data = null;
     int idade = 0;
     String SERIE = null;
@@ -35,7 +34,6 @@ public class inicio extends javax.swing.JFrame {
     /**
      * Creates new form inicio
      */
- 
     public inicio() {
         initComponents();
         setLocationRelativeTo(null);
@@ -424,16 +422,16 @@ public class inicio extends javax.swing.JFrame {
             jLabel11.setForeground(Color.red);
             jTextField4.setForeground(Color.red);
             jTextField4.requestFocus();
-        }else if(senha.isBlank()){
+        } else if (senha.isBlank()) {
             JOptionPane.showMessageDialog(this, "Informe sua senha.");
             jLabel12.setForeground(Color.red);
             jPasswordField1.setForeground(Color.red);
             jPasswordField1.requestFocus();
-        }else{
+        } else {
             jPanel1.setVisible(false);
             jPanel3.setVisible(true);
         }
-        
+
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -441,10 +439,10 @@ public class inicio extends javax.swing.JFrame {
         String nome = jTextField1.getText();
         data = jFormattedTextField2.getText();
         SERIE = jTextField2.getText();
+        email = jTextField3.getText();
         CPF = jFormattedTextField4.getText();
         if (jRadioButton1.isSelected()) {
             curso = jRadioButton1.getText();
-        email = jTextField3.getText();
         } else if (jRadioButton2.isSelected()) {
             curso = jRadioButton2.getText();
         } else if (jRadioButton3.isSelected()) {
@@ -499,7 +497,7 @@ public class inicio extends javax.swing.JFrame {
                             + "\nSerie: " + SERIE
                             + "\nCPF: " + CPF
                             + "\nEmail: " + email
-                            + "\nCurso: " + curso 
+                            + "\nCurso: " + curso
                             + "\nSexo: " + sexo);
                     jLabel10.setVisible(true);
                 } else {
@@ -515,6 +513,9 @@ public class inicio extends javax.swing.JFrame {
                 }
             } catch (HeadlessException | ParseException e) {
                 JOptionPane.showMessageDialog(null, data + " é invalida");
+                jLabel3.setForeground(Color.red);
+                jFormattedTextField2.setForeground(Color.red);
+                jFormattedTextField2.requestFocus();
             }
 
         }
@@ -617,9 +618,8 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-       System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_jButton7ActionPerformed
-
 
     /**
      * @param args the command line arguments
@@ -641,7 +641,7 @@ public class inicio extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        
+
         //</editor-fold>
 
         /* Create and display the form */
