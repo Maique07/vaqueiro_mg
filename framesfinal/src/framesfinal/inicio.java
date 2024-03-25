@@ -317,7 +317,7 @@ public class inicio extends javax.swing.JFrame {
         jPanel3.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(658, 10, 30, 30));
 
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/figuras/f4306264-7377-4470-b087-097f9b4f79d9.jpg"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/figuras/280c89cc-0a9e-474a-8559-93b63134e861.jpg"))); // NOI18N
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
@@ -331,7 +331,7 @@ public class inicio extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 320, 140, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 140, 40));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -377,7 +377,7 @@ public class inicio extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 140, 40));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, 140, 40));
 
         jButton7.setBackground(new java.awt.Color(255, 0, 0));
         jButton7.setText("X");
@@ -390,7 +390,7 @@ public class inicio extends javax.swing.JFrame {
         jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 10, 30, 30));
 
         jLabel8.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/figuras/f4306264-7377-4470-b087-097f9b4f79d9.jpg"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/figuras/280c89cc-0a9e-474a-8559-93b63134e861.jpg"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 390));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

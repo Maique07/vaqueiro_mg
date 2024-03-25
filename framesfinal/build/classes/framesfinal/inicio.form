@@ -513,7 +513,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/figuras/f4306264-7377-4470-b087-097f9b4f79d9.jpg"/>
+              <Image iconType="3" name="/figuras/280c89cc-0a9e-474a-8559-93b63134e861.jpg"/>
             </Property>
           </Properties>
           <Constraints>
@@ -552,7 +552,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="340" y="320" width="140" height="40"/>
+              <AbsoluteConstraints x="460" y="320" width="140" height="40"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -656,7 +656,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="170" y="320" width="140" height="40"/>
+              <AbsoluteConstraints x="270" y="320" width="140" height="40"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -687,7 +687,7 @@
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/figuras/f4306264-7377-4470-b087-097f9b4f79d9.jpg"/>
+              <Image iconType="3" name="/figuras/280c89cc-0a9e-474a-8559-93b63134e861.jpg"/>
             </Property>
           </Properties>
           <Constraints>
