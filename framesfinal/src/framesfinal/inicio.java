@@ -492,7 +492,7 @@ public class inicio extends javax.swing.JFrame {
             jRadioButton4.setForeground(Color.red);
 
         } else if (sexo == null) {
-            JOptionPane.showMessageDialog(this, "Por favor, informe seu curso.");
+            JOptionPane.showMessageDialog(this, "Por favor, informe seu sexo.");
             jLabel13.setForeground(Color.red);
             jRadioButton5.setForeground(Color.red);
             jRadioButton6.setForeground(Color.red);
