@@ -20,6 +20,7 @@ public class cadastro extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setResizable(false);
+        cadastropage.setVisible(false);
     }
 
     /**
@@ -31,8 +32,7 @@ public class cadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabelnome = new javax.swing.JLabel();
+        cadastropage = new javax.swing.JPanel();
         cadastrarnome = new javax.swing.JTextField();
         cadastrarcidade = new javax.swing.JTextField();
         cadastrarestado = new javax.swing.JTextField();
@@ -41,12 +41,18 @@ public class cadastro extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabelnome = new javax.swing.JLabel();
+        homepage = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabelnome.setText("NOME:");
+        cadastropage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cadastrarnome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,22 +64,27 @@ public class cadastro extends javax.swing.JFrame {
                 cadastrarnomeKeyPressed(evt);
             }
         });
+        cadastropage.add(cadastrarnome, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 260, 34));
 
         cadastrarcidade.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 cadastrarcidadeKeyPressed(evt);
             }
         });
+        cadastropage.add(cadastrarcidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 260, 34));
 
         cadastrarestado.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 cadastrarestadoKeyPressed(evt);
             }
         });
+        cadastropage.add(cadastrarestado, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 260, 37));
 
         jLabelcidade.setText("CIDADE");
+        cadastropage.add(jLabelcidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
         jLabelestado.setText("ESTADO");
+        cadastropage.add(jLabelestado, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
 
         jButton1.setText("SAIR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +92,7 @@ public class cadastro extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        cadastropage.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, -1, -1));
 
         jButton2.setText("cadastrar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -88,6 +100,7 @@ public class cadastro extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        cadastropage.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, -1, -1));
 
         jButton3.setText("imprimir");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -95,58 +108,45 @@ public class cadastro extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        cadastropage.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
-                        .addComponent(jButton2)
-                        .addGap(41, 41, 41)
-                        .addComponent(jButton3)
-                        .addGap(23, 23, 23))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelnome)
-                            .addComponent(cadastrarcidade, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelcidade)
-                            .addComponent(jLabelestado)
-                            .addComponent(cadastrarnome, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cadastrarestado, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(115, 115, 115)
-                .addComponent(jLabelnome)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cadastrarnome, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelcidade)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cadastrarcidade, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelestado)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cadastrarestado, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabelnome.setText("NOME:");
+        cadastropage.add(jLabelnome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+
+        getContentPane().add(cadastropage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 360));
+
+        homepage.setBackground(new java.awt.Color(153, 255, 153));
+        homepage.setForeground(new java.awt.Color(102, 153, 0));
+        homepage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton5.setFont(new java.awt.Font("Viner Hand ITC", 0, 12)); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/botao-de-inicio (1).png"))); // NOI18N
+        jButton5.setContentAreaFilled(false);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        homepage.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Harlow Solid Italic", 1, 105)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Cadastro");
+        homepage.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 400, 110));
+
+        jLabel2.setFont(new java.awt.Font("Niagara Solid", 0, 24)); // NOI18N
+        jLabel2.setText("MGVAQUEIRO PRODUÇÕES");
+        homepage.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, 230, 30));
+
+        jLabel3.setFont(new java.awt.Font("Harlow Solid Italic", 1, 105)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 153, 51));
+        jLabel3.setText("Cadastro");
+        homepage.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 400, 110));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/vaqueiro.png"))); // NOI18N
+        homepage.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
+
+        getContentPane().add(homepage, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 480, 360));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -215,15 +215,20 @@ public class cadastro extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         String todos_cadastros = " ";
-         for(i=0 ; i < cadastro.length; i++){
-             for(x=0 ; x < 3; x++){
-                 todos_cadastros += cadastro[i][x];
-                 todos_cadastros += "  ";
-             }
-             todos_cadastros += "\n";
-         }
-        JOptionPane.showMessageDialog(null,todos_cadastros);
+        for (i = 0; i < cadastro.length; i++) {
+            for (x = 0; x < 3; x++) {
+                todos_cadastros += cadastro[i][x];
+                todos_cadastros += "  ";
+            }
+            todos_cadastros += "\n";
+        }
+        JOptionPane.showMessageDialog(null, todos_cadastros);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        homepage.setVisible(false);
+        cadastropage.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -264,12 +269,18 @@ public class cadastro extends javax.swing.JFrame {
     private javax.swing.JTextField cadastrarcidade;
     private javax.swing.JTextField cadastrarestado;
     private javax.swing.JTextField cadastrarnome;
+    private javax.swing.JPanel cadastropage;
+    private javax.swing.JPanel homepage;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelcidade;
     private javax.swing.JLabel jLabelestado;
     private javax.swing.JLabel jLabelnome;
-    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
