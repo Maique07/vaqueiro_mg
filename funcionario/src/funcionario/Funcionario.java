@@ -24,8 +24,7 @@ public class Funcionario {
         Scanner x = new Scanner(System.in);
         CLASS_FUNCIONARIO f = new CLASS_FUNCIONARIO();
         System.out.println("informe seu nome: ");
-        String nome = x.next();
-        nome = f.getNome();
+        String nome =  f.getNome();
         System.out.println("informe sua data de admissão");
         String Adm = x.next();
         System.out.println("informe valor da hora trabalhada: ");
@@ -33,6 +32,7 @@ public class Funcionario {
         System.out.println("informe sua horas trabalhadas: ");
         float horas_trabalhadas = x.nextFloat();
         SimpleDateFormat form = new SimpleDateFormat("dd/MM/yyyy");
+        
         try {
             Date Admissao = form.parse(Adm);
             f.setDataAdmissao(Admissao);

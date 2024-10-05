@@ -12,6 +12,7 @@ import java.util.Date;
  * @author Maique
  */
 public class CLASS_FUNCIONARIO {
+
     private String nome;
     private Date dataAdmissao;
     private float valor_horas;
@@ -48,7 +49,8 @@ public class CLASS_FUNCIONARIO {
     public void setHoras_trabalhadas(float horas_trabalhadas) {
         this.horas_trabalhadas = horas_trabalhadas;
     }
-        int i;
+    int i;
+
     public int calcularTempoempresa() {
         Calendar dataADM = Calendar.getInstance();
         dataADM.setTime(dataAdmissao);
@@ -69,11 +71,12 @@ public class CLASS_FUNCIONARIO {
         if (i >= 5 && i < 10) {
             sal_reajustado = sal * (5 / 100);
             sal_final = sal + sal_reajustado;
+            return sal_final;
 
         } else if (i >= 10) {
             sal_reajustado = sal * (10 / 100);
             sal_final = sal + sal_reajustado;
-
+            return sal_final;
         }
         return sal_final;
 
