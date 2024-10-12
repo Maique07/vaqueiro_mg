@@ -67,18 +67,15 @@ public class CLASS_FUNCIONARIO {
 
     public float calcularSalario() {
         float sal = ((valor_horas * horas_trabalhadas));
-        float sal_reajustado, sal_final = 0;
-        if (i >= 5 && i < 10) {
-            sal_reajustado = sal * (5 / 100);
-            sal_final = sal + sal_reajustado;
-            return sal_final;
-
-        } else if (i >= 10) {
-            sal_reajustado = sal * (10 / 100);
-            sal_final = sal + sal_reajustado;
-            return sal_final;
+        float sal_reajustado5 = sal*0.05f, sal_reajustado10 = sal*0.10f;
+        
+        int y = calcularTempoempresa();
+        if (y >= 5 && y < 10) {
+             sal += sal_reajustado5;
+        } else if (y >= 10) {
+            sal += sal_reajustado10;
         }
-        return sal_final;
+        return sal;
 
     }
 }
