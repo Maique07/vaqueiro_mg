@@ -20,6 +20,7 @@ public class cadastro extends javax.swing.JFrame {
 
     controleacesso c = new controleacesso();
     SimpleDateFormat form = new SimpleDateFormat("dd/MM/yyyy");
+    funcionario f = new funcionario();
     String Adm = null;
 
     /**
@@ -143,6 +144,7 @@ public class cadastro extends javax.swing.JFrame {
         jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, 80, -1));
 
         Htrabalhada.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Htrabalhada.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
         Htrabalhada.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 HtrabalhadaKeyPressed(evt);
@@ -151,6 +153,7 @@ public class cadastro extends javax.swing.JFrame {
         jPanel2.add(Htrabalhada, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 210, 30));
 
         VHtrabalhada.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        VHtrabalhada.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
         VHtrabalhada.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 VHtrabalhadaKeyPressed(evt);
@@ -180,7 +183,7 @@ public class cadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        funcionario f = new funcionario();
+
 
         String nome = Nome.getText();
         Adm = D_admissao.getText();
@@ -208,7 +211,8 @@ public class cadastro extends javax.swing.JFrame {
             Htrabalhada.setForeground(Color.red);
             Htrabalhada.requestFocus();
         }   else{
-        try {
+        try {    
+                form.setLenient(false);
                 Date Admissao = form.parse(Adm);
                 f.setDataAdmissao(Admissao);
                 f.setNome(nome);
@@ -216,6 +220,9 @@ public class cadastro extends javax.swing.JFrame {
                 f.setHoras_trabalhadas(Float.parseFloat(HT));
             } catch (ParseException ex) {
                 JOptionPane.showMessageDialog(null, "Data Inválida!");
+                jLabel4.setForeground(Color.red);
+                D_admissao.setForeground(Color.red);
+                D_admissao.requestFocus();
             }
             int tempoEmpresa = f.calcularTempoempresa();
             float salario = f.calcularSalario();
